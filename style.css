@@ -1,0 +1,351 @@
+/* Google Font(s) */
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+/* Main Styling */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: black;
+	color: white;
+	font-family: 'Titillium Web', sans-serif;
+}
+
+#page-wrapper {
+	position: relative;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+/* Classes */
+
+.container {
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.btn {
+	padding: 0px 20px;
+	height: 40px;
+	width: 100px;
+	text-transform: uppercase;
+	font-size: 1em;
+	font-weight: 600;
+	border: 3px #8F0002 solid;
+	border-radius: 3px;
+	color: white;
+	background-color: #930003;
+	cursor: cursor;
+}
+
+.grid {
+	display: flex;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  min-height: 75px;
+  padding: 0px 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #7A0002;
+  max-width: 100%;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+  }
+}
+
+.logo {
+  width: 60vw;
+}
+
+@media (max-width: 650px) {
+  .logo {
+    margin-top: 15px;
+    width: 100%;
+    position: relative;
+  }
+}
+
+.logo > img {
+  width: 100%;
+  height: 100%;
+  max-width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 5px;
+}
+
+@media (max-width: 650px) {
+  .logo > img {
+    margin: 0 auto;
+  }
+}
+
+nav {
+  font-weight: 400;
+}
+
+@media (max-width: 650px) {
+  nav {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+  }
+  nav li {
+    padding-bottom: 5px;
+  }
+}
+
+nav > ul {
+  width: 35vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+nav a:hover {
+	border-bottom: 1px white solid;
+}
+
+@media (max-width: 650px) {
+  nav > ul {
+    flex-direction: column;
+  }
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+  margin-top: 50px;
+}
+
+#hero > h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+
+#hero input[type='email'] {
+  max-width: 275px;
+  width: 100%;
+  padding: 20px;
+}
+
+#hero input[type='email']::placeholder {
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+#hero input[type='submit'] {
+  max-width: 150px;
+  width: 100%;
+  height: 30px;
+  margin: 15px 0;
+  border: 0;
+  background-color: #930003;
+}
+
+#hero input[type='submit']:hover {
+  background-color: red;
+  transition: background-color 1s;
+}
+
+input:focus::-webkit-input-placeholder {
+    font-size: .75em;
+    position: relative;
+    top: -15px; 
+    transition: 10s ease-out;
+}
+
+input::-webkit-input-placeholder {
+    transition: 10s ease-in;
+}
+
+@media (max-width: 650px) {
+  #hero {
+    margin-top: 120px;
+  }
+}
+
+#features {
+  margin-top: 30px;
+}
+
+#features .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 125px;
+  width: 20vw;
+  color: #7A0002;
+}
+
+@media (max-width: 550px) {
+  #features .icon {
+    display: none;
+  }
+}
+
+#features .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 125px;
+  width: 80vw;
+  padding: 5px;
+}
+
+@media (max-width: 550px) {
+  #features .desc {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    height: 150px;
+  }
+}
+
+@media (max-width: 650px) {
+  #features {
+    margin-top: 0;
+  }
+}
+
+#content {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#content > iframe {
+  max-width: 560px;
+  height: 315px;
+  width: 100%;
+}
+
+#pricing {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100% / 3);
+  margin: 10px;
+  border: 1px solid #8F0002;
+  border-radius: 3px;
+  border-top: none;
+}
+
+.product > .level {
+  background-color: #8F0002;
+  color: white;
+  padding: 15px 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.product > h2 {
+  margin-top: 15px;
+}
+
+.product > ol {
+  margin: 15px 0;
+}
+
+.product > ol > li {
+  padding: 5px 0;
+}
+
+.product > button {
+  border: 0;
+  margin: 15px 0;
+  background-color: #930003;
+  font-weight: 400;
+}
+
+.product > button:hover {
+  background-color: red;
+  transition: background-color 1s;
+}
+
+@media (max-width: 800px) {
+  #pricing {
+    flex-direction: column;
+  }
+  .product {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
+
+footer {
+  margin-top: 30px;
+  background-color: #7A0002;
+  padding: 20px;
+}
+
+footer > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer > ul > li {
+  padding: 0 10px;
+}
+
+footer > span {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+  color: #E00004;
+}
+
+.space {
+	margin: 5rem;
+}
+
+.invis {
+	visibility: hidden;
+}
+
+/* a: hover*/
+/* https://coolors.co/2d050b-31060c-39070f-420813-4d0a15-580b16-e00004-7a0002-8f0002-930003 */
+/* https://htmlcolors.com/palette/42/netflix */
